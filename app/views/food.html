@@ -1,0 +1,25 @@
+ <base href="/food">
+<div class="row">
+
+    <form action="" ng-submit="saveFood()" method="POST" role="form">
+        
+        <legend>New Food</legend>
+
+        <div class="form-group">
+            <label for="">Food Name</label>
+            <input type="text" ng-model="food.name" class="form-control" id="" placeholder="Input field" />
+        </div>
+
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+    
+    <h1>My Food List!!</h1>
+
+    <ul>
+        <li ng-repeat="food in foodList">
+            {{ food.name }}
+            <button ng-click="editFood(food)">Edit</button>
+        </li>
+    </ul>
+
+</div>
